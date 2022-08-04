@@ -5,13 +5,11 @@
 
 package com.mycompany.lab1.relacion.uno.muchos;
 
-/**
- *
- * @author Jaivalos
- */
 public class Lab1RelacionUnoMuchos {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        Curso curso1 = new Curso("Matematicas", 3);
+        curso1.listAlumnos();
+        curso1.getListAlumnos();
     }
 }

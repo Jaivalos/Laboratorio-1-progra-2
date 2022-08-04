@@ -44,13 +44,19 @@ public class Curso {
     
     public void listAlumnos(){
         for(int i = 0; i < tamanio; i++){
-            System.out.println("Ingrese el nombre ");
+            System.out.println("Ingrese el nombre del alumno: "+ (i+1));
             String nombre = leer.next();
-            System.out.println("Ingrese la edad ");
+            System.out.println("Ingrese la edad del alumno: "+ (i+1));
             int edad = leer.nextInt();
             
             alumnos[i] = new Alumno(nombre, edad);
             
+        }
+    }
+    
+    public void getListAlumnos(){
+        for(int i = 0; i < tamanio; i++){
+            System.out.println("Alumno: "+alumnos[i].getNombre()+" Con edad: "+alumnos[i].getEdad());
         }
     }
     
