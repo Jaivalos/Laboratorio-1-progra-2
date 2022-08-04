@@ -4,11 +4,14 @@
  */
 package com.mycompany.lab1.relacion.uno.muchos;
 
+import java.util.Scanner;
+
 public class Curso {
     
     private String idCurso;
     private int tamanio;
     private Alumno alumnos[];
+    Scanner leer = new Scanner(System.in);
     
     //Constructor
     public Curso(String idCurso, int tamanio){
@@ -37,6 +40,18 @@ public class Curso {
     }
     public void setAlumnos(Alumno[] alumnos){
         this.alumnos = alumnos;
+    }
+    
+    public void listAlumnos(){
+        for(int i = 0; i < tamanio; i++){
+            System.out.println("Ingrese el nombre ");
+            String nombre = leer.next();
+            System.out.println("Ingrese la edad ");
+            int edad = leer.nextInt();
+            
+            alumnos[i] = new Alumno(nombre, edad);
+            
+        }
     }
     
 }
